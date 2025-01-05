@@ -1,24 +1,14 @@
-// function Button({
-//   svgIcon: SvgIconComponent,
-//   text = undefined,
-//   className,
-//   onClick = undefined,
-// }) {
-//   return (
-//     <button onClick={onClick}>
-//       {SvgIconComponent && <SvgIconComponent />}
-//       {text && (
-//         <span onClick={onClick} className={className}>
-//           {text}
-//         </span>
-//       )}
-//     </button>
-//   );
-// }
+import { IButtonProps } from "./Button.props";
+import styles from "./Button.module.css";
+import cn from "classnames";
 
-// Button.propTypes = {
-//   svgIcon: PropTypes.elementType,
-//   text: PropTypes.string,
-//   className: PropTypes.string.isRequired,
-//   onClick: PropTypes.func.isRequired,
-// };
+function Button({ text, icon, appearance }: IButtonProps): JSX.Element {
+  return (
+    <button className={cn(styles["button"], styles[appearance])}>
+      {icon && <span className="icon">{icon}</span>}
+      {text && <span>{text}</span>}
+    </button>
+  );
+}
+
+export default Button;

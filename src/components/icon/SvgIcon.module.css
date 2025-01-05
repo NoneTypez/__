@@ -1,0 +1,17 @@
+.svg {
+  width: 35px;
+  height: auto;
+  fill: #5b5b5b;
+}
+
+.svg:hover {
+  fill: #bbbbbb;
+}
+
+.search-panel-icon {
+  background-color:#8d8d8d;
+  height:14px;
+  width:14px;
+  width:14px;
+  height:14px;
+}

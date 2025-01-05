@@ -1,0 +1,13 @@
+.header {
+  height:16px;
+  width:36px;
+  padding:0px;
+  display:flex;
+  flex-direction:row;
+  justify-content:flex-start;
+  align-items:center;
+  gap:2px;
+  position:relative;
+  border-style:hidden;
+  outline:none;
+}

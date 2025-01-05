@@ -1,0 +1,31 @@
+.button {
+  height:22px;
+  width:80px;
+  border-radius:5px;
+  padding:5px;
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+  position:relative;
+  font-size:10px;
+}
+.blue {
+  background-color:#0f73b9;
+  transition: background-color 0.3s ease;
+  color: rgb(194, 193, 193);
+}
+.blue:hover {
+  background-color: #4794ca;
+  color: rgb(235, 234, 234);
+}
+
+.grey {
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+.grey:hover {
+  border-bottom: 2px solid rgb(235, 234, 234);
+  color: rgb(235, 234, 234);
+}
