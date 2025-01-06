@@ -3,14 +3,15 @@ import cn from "classnames";
 import styles from "./SvgIcon.module.css";
 
 function SvgIcon({
-  appearance,
+  mainStyle,
+  appearance = "",
   xlmns,
   viewbox,
   iconPath,
 }: SvgIconProps): JSX.Element {
   return (
     <svg
-      className={cn(styles["svg"], appearance)}
+      className={cn(styles[mainStyle], styles[appearance])}
       xmlns={xlmns}
       viewBox={viewbox}
     >

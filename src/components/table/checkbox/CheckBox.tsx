@@ -1,5 +1,5 @@
 import ICheckboxProps from "./CheckBox.props";
-import style from "./CheckBox.module.css";
+import styles from "./CheckBox.module.css";
 import cn from "classnames";
 
 function Checkbox({
@@ -15,7 +15,7 @@ function Checkbox({
       id={id}
       checked={checked}
       onChange={onChange}
-      className={cn(style["checkbox"], style[appearance])}
+      className={cn(styles["checkbox"], styles[appearance])}
     />
   );
 

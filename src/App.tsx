@@ -13,6 +13,7 @@ function App() {
         text="BUTTON"
         icon={
           <SvgIcon
+            mainStyle="svg"
             xlmns={icons.xlmn}
             viewbox={icons.viewBox}
             iconPath={icons.dashboard}

@@ -15,3 +15,22 @@
   width:14px;
   height:14px;
 }
+
+.sort-rectangle {
+  width: 6px;
+  height: auto;
+}
+
+.active-sort {
+  background-color:#ffffff;
+  left:15.102032661437988px;
+  top:2.3719000816345215px;
+  position:absolute;
+}
+
+.non-active-sort {
+  background-color:#a1a1a1;
+  left:15.102032661437988px;
+  top:9px;
+  position:absolute;
+}
