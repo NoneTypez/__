@@ -7,7 +7,7 @@ function Checkbox({
   label,
   onChange,
   id,
-  appearance = "",
+  appearance,
 }: ICheckboxProps): JSX.Element {
   const input = (
     <input
@@ -15,7 +15,7 @@ function Checkbox({
       id={id}
       checked={checked}
       onChange={onChange}
-      className={cn(styles["checkbox"], styles[appearance])}
+      className={cn(styles["checkbox"], appearance && styles[appearance])}
     />
   );
 

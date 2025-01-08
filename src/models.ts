@@ -51,7 +51,7 @@ const sortDirections: ISortDirection = {
 const testProfiles: Array<object> = [
   {
     id: 1,
-    name: "main",
+    profileName: "main",
     email: "graffity555@gmail.com",
     twitter: "@hush551",
     discord: "mad3356",
@@ -61,7 +61,7 @@ const testProfiles: Array<object> = [
   },
   {
     id: 2,
-    name: "main_2",
+    profileName: "main_2",
     email: "graffity2552@gmail.com",
     twitter: "@hush001",
     discord: "mah46",
@@ -71,7 +71,7 @@ const testProfiles: Array<object> = [
   },
   {
     id: 3,
-    name: "main_3",
+    profileName: "main_3",
     email: "graffity001@gmail.com",
     twitter: "@hush551",
     discord: "mth5667",
@@ -88,7 +88,8 @@ const forms: Array<object> = [
   { name: "discord", placeholder: "dicord3301" },
   { name: "telegram", placeholder: "@telegram" },
   { name: "telephone", placeholder: "+1234567890" },
-  { name: "seed", placeholder: "" },
+  { name: "github", placeholder: "" },
+  { name: "balance", placeholder: "" },
 ];
 
 export { icons, testProfiles, forms, sortDirections };
