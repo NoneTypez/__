@@ -6,6 +6,7 @@ import SvgIcon from "../../icon/SvgIcon";
 import { icons } from "../../../models";
 
 function TableHeaders(): JSX.Element {
+  // USESTATE FOR SELECTED OPTION!!!!##########
   return (
     <>
       <div className="tableheader-container">
@@ -30,27 +31,49 @@ function TableHeaders(): JSX.Element {
           />
         </a>
       </div>
-      <div className="tableheader-container">
-        <Checkbox />
-        <span>
-          <ColumnHeader text="#" />
-          <SortColumn />
-        </span>
-        <span>
-          <ColumnHeader text="NAME" />
-          <SortColumn />
-        </span>
-        <ColumnHeader text="EMAIL" />
-        <ColumnHeader text="TWITTER" />
-        <ColumnHeader text="DISCORD" />
-        <ColumnHeader text="TELEGRAM" />
-        <ColumnHeader text="TELEPHONE" />
-        <ColumnHeader text="GITHUB" />
-        <span>
-          <ColumnHeader text="BALANCE" />
-          <SortColumn />
-        </span>
-      </div>
+      <thead>
+        <tr>
+          <th>
+            <Checkbox />
+          </th>
+          <th>
+            <span>
+              <ColumnHeader text="#" />
+              <SortColumn />
+            </span>
+          </th>
+          <th>
+            <span>
+              <ColumnHeader text="NAME" />
+              <SortColumn />
+            </span>
+          </th>
+          <th>
+            <ColumnHeader text="EMAIL" />
+          </th>
+          <th>
+            <ColumnHeader text="TWITTER" />
+          </th>
+          <th>
+            <ColumnHeader text="DISCORD" />
+          </th>
+          <th>
+            <ColumnHeader text="TELEGRAM" />
+          </th>
+          <th>
+            <ColumnHeader text="TELEPHONE" />
+          </th>
+          <th>
+            <ColumnHeader text="GITHUB" />
+          </th>
+          <th>
+            <span>
+              <ColumnHeader text="BALANCE" />
+              <SortColumn />
+            </span>
+          </th>
+        </tr>
+      </thead>
     </>
   );
 }

@@ -18,6 +18,18 @@ interface ISortDirection {
   downdir: string;
 }
 
+interface IHeadersValues {
+  id: string | number;
+  profileName: string;
+  email: string;
+  twitter: string;
+  discord: string;
+  telegram: string;
+  telephone: string;
+  github: string;
+  balance: string;
+}
+
 const icons: IIcons = {
   xlmn: "http://www.w3.org/2000/svg",
   viewBox: "0 -960 960 960",
@@ -48,36 +60,28 @@ const sortDirections: ISortDirection = {
     "M3.55173 4.4148C3.35263 4.6992 2.93153 4.6992 2.73253 4.4148L0.19283 0.78673C-0.0391703 0.45534 0.197929 0 0.602429 0H5.68183C6.08633 0 6.32333 0.45534 6.09143 0.78673L3.55173 4.4148Z",
 };
 
-const testProfiles: Array<object> = [
+const testData: IHeadersValues[] = [
   {
     id: 1,
-    profileName: "main",
-    email: "graffity555@gmail.com",
-    twitter: "@hush551",
-    discord: "mad3356",
-    telegram: "@typenone",
-    telephone: "+380955518443",
-    github: "nonetype",
+    profileName: "John Doe",
+    email: "john@example.com",
+    twitter: "@johndoe",
+    discord: "",
+    telegram: "@johndoe",
+    telephone: "123456789",
+    github: "johndoe",
+    balance: "10000 $",
   },
   {
     id: 2,
-    profileName: "main_2",
-    email: "graffity2552@gmail.com",
-    twitter: "@hush001",
-    discord: "mah46",
-    telegram: "@typenone_1",
-    telephone: "+380955518443",
-    github: "nonetyper",
-  },
-  {
-    id: 3,
-    profileName: "main_3",
-    email: "graffity001@gmail.com",
-    twitter: "@hush551",
-    discord: "mth5667",
-    telegram: "@typenone_1",
-    telephone: "+380955518443",
-    github: "nonetypez",
+    profileName: "Jane Smith",
+    email: "jane@example.com",
+    twitter: "@janesmith",
+    discord: "JaneSmith#1234",
+    telegram: "",
+    telephone: "987654321",
+    github: "janesmith",
+    balance: "200$",
   },
 ];
 
@@ -92,4 +96,4 @@ const forms: Array<object> = [
   { name: "balance", placeholder: "" },
 ];
 
-export { icons, testProfiles, forms, sortDirections };
+export { icons, testData, forms, sortDirections };
