@@ -4,7 +4,7 @@ import cn from "classnames";
 
 function SearchPanel({ icon, placeholder }: ISearchPanel): JSX.Element {
   return (
-    <div className={cn(styles["main"], styles["input"])}>
+    <div className={cn(styles.main, styles.input)}>
       {icon && icon}
       <input
         type="text"

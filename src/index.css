@@ -83,3 +83,10 @@ button {
   --icon-width: 35px;
   --icon-height: auto;
 }
+
+#root {
+  display: flex;
+  flex-direction: row;
+  background-color: #040404;
+
+}

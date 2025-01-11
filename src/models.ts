@@ -19,7 +19,7 @@ interface ISortDirection {
 }
 
 interface IHeadersValues {
-  id: string | number;
+  id: number;
   profileName: string;
   email: string;
   twitter: string;
@@ -82,6 +82,17 @@ const testData: IHeadersValues[] = [
     telephone: "987654321",
     github: "janesmith",
     balance: "200$",
+  },
+  {
+    id: 3,
+    profileName: "Jane Smith",
+    email: "jane@example.com",
+    twitter: "@janesmith",
+    discord: "JaneSmith#1234",
+    telegram: "",
+    telephone: "987654321",
+    github: "janesmith",
+    balance: "300$",
   },
 ];
 

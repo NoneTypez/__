@@ -15,7 +15,7 @@ function Checkbox({
       id={id}
       checked={checked}
       onChange={onChange}
-      className={cn(styles["checkbox"], appearance && styles[appearance])}
+      className={cn(styles.checkbox, appearance && styles.appearance)}
     />
   );
 

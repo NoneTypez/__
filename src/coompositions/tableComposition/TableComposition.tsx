@@ -1,8 +1,10 @@
 import { ITableComposition } from "./TableComposition.props";
-import Checkbox from "../checkbox/CheckBox";
-import ColumnHeader from "../columnHeader/ColumnHeader";
-import Button from "../../button/Button";
+import Checkbox from "../../components/table/checkbox/CheckBox";
+import ColumnHeader from "../../components/table/columnHeader/ColumnHeader";
+import Button from "../../components/button/Button";
 import TableHeaders from "./TableHeaders";
+import cn from "classnames";
+import styles from "./TableComposition.module.css";
 
 function TableComposition({ data }: ITableComposition): JSX.Element {
   return (
@@ -26,7 +28,13 @@ function TableComposition({ data }: ITableComposition): JSX.Element {
             },
             rowIndex
           ) => (
-            <tr key={rowIndex}>
+            <tr
+              key={rowIndex}
+              className={cn(styles.row, {
+                [styles.light]: rowIndex % 2 !== 0,
+                [styles.dark]: rowIndex % 2 === 0,
+              })}
+            >
               <td>{<Checkbox />}</td>
               <td>{<ColumnHeader text={id} />}</td>
               <td>{<ColumnHeader text={profileName || ""} />}</td>

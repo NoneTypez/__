@@ -1,9 +1,9 @@
-import Checkbox from "../checkbox/CheckBox";
-import ColumnHeader from "../columnHeader/ColumnHeader";
-import SearchPanel from "../searchPanel/SearchPanel";
-import SortColumn from "../sortColumn/SortColumn";
-import SvgIcon from "../../icon/SvgIcon";
-import { icons } from "../../../models";
+import Checkbox from "../../components/table/checkbox/CheckBox";
+import ColumnHeader from "../../components/table/columnHeader/ColumnHeader";
+import SearchPanel from "../../components/table/searchBar/SearchPanel";
+import SortColumn from "../../components/table/sortColumn/SortColumn";
+import SvgIcon from "../../components/icon/SvgIcon";
+import { icons } from "../../models";
 
 function TableHeaders(): JSX.Element {
   // USESTATE FOR SELECTED OPTION!!!!##########

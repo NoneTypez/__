@@ -1,0 +1,12 @@
+.row {
+  height: 50px;
+  width:1140px;
+}
+
+.light {
+  background-color:#393636;
+}
+
+.dark {
+  background-color: #2a272a;
+}
