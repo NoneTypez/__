@@ -1,17 +1,16 @@
 // import { useState } from 'react'
 import "./App.css";
-import LeftSide from "./coompositions/leftSide/LeftSide";
-import RightSide from "./coompositions/rightSide/RightSide";
-import TableComposition from "./coompositions/tableComposition/TableComposition";
-import { testData } from "./models";
+import Sidebar from "./coompositions/sideBar/Sidebar";
+import Window from "./coompositions/window/Window";
+import { WindowAppearance } from "./enums";
 
 function App() {
   // const [count, setCount] = useState(0)
 
   return (
     <>
-      <LeftSide />
-      <RightSide children={<TableComposition data={testData} />} />
+      <Sidebar />
+      <Window appearance={WindowAppearance.main} />
     </>
   );
 }

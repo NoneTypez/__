@@ -1,0 +1,6 @@
+.logo {
+  width: 35px;
+  height: auto;
+  flex-shrink: 0;
+  filter: drop-shadow(5px 0px 3px #000000);
+}

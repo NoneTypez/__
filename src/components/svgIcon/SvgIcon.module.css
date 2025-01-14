@@ -1,0 +1,36 @@
+.sidebarMain{
+  width: 35px;
+  height: auto;
+  fill: #5b5b5b;
+}
+
+.sidebarMain:hover {
+  fill: #bbbbbb;
+}
+
+.search-panel-icon {
+  background-color:#8d8d8d;
+  height:14px;
+  width:14px;
+  width:14px;
+  height:14px;
+}
+
+.sort-rectangle {
+  width: 6px;
+  height: auto;
+}
+
+.active-sort {
+  background-color:#ffffff;
+  left:15.102032661437988px;
+  top:2.3719000816345215px;
+  position:absolute;
+}
+
+.non-active-sort {
+  background-color:#a1a1a1;
+  left:15.102032661437988px;
+  top:9px;
+  position:absolute;
+}

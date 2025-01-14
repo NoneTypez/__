@@ -1,50 +1,19 @@
-.button {
-  height:22px;
-  width:80px;
-  border-radius:5px;
-  padding:5px;
-  display:flex;
-  flex-direction:row;
-  justify-content:center;
-  align-items:center;
-  gap:10px;
-  position:relative;
-  font-size:10px;
-}
-.blue {
-  background-color:#0f73b9;
+.sidebar {
+  border-radius: 5px;
   transition: background-color 0.3s ease;
-  color: rgb(194, 193, 193);
-}
-.blue:hover {
-  background-color: #4794ca;
-  color: rgb(235, 234, 234);
+  cursor: default;
 }
 
-.grey {
-  color: var(--text-color);
-  transition: color 0.3s ease;
-}
-.grey:hover {
-  border-bottom: 2px solid rgb(235, 234, 234);
-  color: rgb(235, 234, 234);
+.sidebar:hover {
+  background-color: rgba(92, 93, 93, 0.5);
 }
 
-.details {
-  background-color:#cac6c6;
-  height:20px;
-  width:62px;
-  border-radius:10px;
-  padding-left:10px;
-  padding-right:10px;
-  padding-top:1px;
-  padding-bottom:1px;
-  display:flex;
-  flex-direction:row;
-  justify-content:center;
-  align-items:center;
-  gap:6px;
-  position:relative;
-  border-style:hidden;
-  outline:none;
+.sidebar:hover svg {
+  fill: #bbbbbb; /* Изменяет цвет fill у SVG */
+  transition: fill 0.3s ease; /* Анимация для fill */
+}
+
+.base {
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
