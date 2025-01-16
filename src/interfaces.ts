@@ -39,3 +39,24 @@ interface IRowData {
 export interface ITableComposition {
   data: IRowData[];
 }
+
+export interface ISubMenus {
+  [key: string]: { text: string; onclick: () => void }[];
+  exchange: {
+    text: string;
+    onclick: () => void;
+  }[];
+  projects: {
+    text: string;
+    onclick: () => void;
+  }[];
+  scripts: {
+    text: string;
+    onclick: () => void;
+  }[];
+  other: {
+    text: string;
+    onclick: () => void;
+  }[];
+  table: never[];
+}
