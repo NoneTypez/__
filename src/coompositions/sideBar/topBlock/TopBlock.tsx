@@ -8,7 +8,7 @@ import SvgIcon from "../../../components/svgIcon/SvgIcon";
 
 function TopBlock(): JSX.Element {
   return (
-    <div className={cn(styles.block, styles.topblock)}>
+    <ul className={cn(styles.block, styles.topblock)}>
       <Logo src="src/assets/logo.png" />
       <Button
         className={cn(styles.button)}
@@ -20,7 +20,7 @@ function TopBlock(): JSX.Element {
           />
         }
       />
-    </div>
+    </ul>
   );
 }
 

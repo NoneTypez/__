@@ -96,6 +96,7 @@ body {
   font-variant: small-caps;
   text-transform: none;
   background-color: #040404;
+  cursor: default;
 }
 
 #root {
@@ -106,3 +107,5 @@ body {
   background-color: #040404;
   padding: 10px;
 }
+
+

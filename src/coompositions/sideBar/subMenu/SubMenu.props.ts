@@ -1,5 +1,8 @@
-import { ISubMenus } from "../../../interfaces";
+// interface SubMenuItem {
+//   text: string;
+//   onclick: () => void;
+// }
 
-export default interface SubMenuProps {
-  data: ISubMenus;
+export interface SubMenuProps {
+  menuKey: string;
 }

@@ -22,3 +22,13 @@ export enum SearcherAppearance {
 export enum WindowAppearance {
   main = "main",
 }
+
+export enum SideBarButtons {
+  dashboard = "dashboard",
+  exchange = "exchange",
+  projects = "projects",
+  scripts = "scripts",
+  swap = "swap",
+  other = "other",
+  table = "table",
+}

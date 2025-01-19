@@ -1,30 +1,31 @@
 import Button from "../../../components/button/Button";
-import styles from "./SubMenu.module.css";
-import cn from "classnames";
-import SubMenuProps from "./SubMenu.props";
 import { ButtonAppearance } from "../../../enums";
+import { SubMenuProps } from "./SubMenu.props";
+import cn from "classnames";
+import styles from "./SubMenu.module.css";
+import { subMenus } from "../../../models";
 
-const SubMenu: React.FC<SubMenuProps> = ({ data }) => {
+function SubMenu({ menuKey }: SubMenuProps): JSX.Element {
+  const menuItems = subMenus[menuKey];
+
+  if (!menuItems || menuItems.length === 0) {
+    return <></>;
+  }
+
   return (
-    <>
-      {Object.keys(data).map((category) => (
-        <li key={category} className={cn(styles.submenu)}>
-          <span>{category.toUpperCase()}</span>
-          <ul>
-            {data[category].map((item, index) => (
-              <li key={index}>
-                <Button
-                  text={item.text}
-                  appearance={ButtonAppearance.base} // Или другой вид
-                  onClick={item.onclick} // Обработчик клика
-                />
-              </li>
-            ))}
-          </ul>
+    <ul className={cn(styles.submenu)}>
+      {menuItems.map((item, index) => (
+        <li key={index} className={cn(styles.submenuItem)}>
+          <Button
+            appearance={ButtonAppearance.base}
+            className={styles.submenuButton}
+            text={item.text}
+            onClick={item.onclick}
+          />
         </li>
       ))}
-    </>
+    </ul>
   );
-};
+}
 
 export default SubMenu;
