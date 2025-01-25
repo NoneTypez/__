@@ -1,9 +1,9 @@
-import { ReactNode, ButtonHTMLAttributes } from "react";
+import { ButtonHTMLAttributes } from "react";
 import { ButtonAppearance } from "../../enums";
 
 export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  children?: ReactNode;
   text?: string;
   icon?: JSX.Element;
+  subMenuButton?: string;
   appearance: ButtonAppearance;
 }

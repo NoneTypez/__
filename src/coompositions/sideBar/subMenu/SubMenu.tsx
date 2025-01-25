@@ -5,7 +5,7 @@ import cn from "classnames";
 import styles from "./SubMenu.module.css";
 import { subMenus } from "../../../models";
 
-function SubMenu({ menuKey }: SubMenuProps): JSX.Element {
+function SubMenu({ menuKey, isVisible }: SubMenuProps): JSX.Element {
   const menuItems = subMenus[menuKey];
 
   if (!menuItems || menuItems.length === 0) {
@@ -13,7 +13,11 @@ function SubMenu({ menuKey }: SubMenuProps): JSX.Element {
   }
 
   return (
-    <ul className={cn(styles.submenu)}>
+    <ul
+      className={cn(styles.submenu, {
+        [styles.visible]: isVisible,
+      })}
+    >
       {menuItems.map((item, index) => (
         <li key={index} className={cn(styles.submenuItem)}>
           <Button

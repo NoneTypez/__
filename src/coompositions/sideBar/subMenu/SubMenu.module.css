@@ -1,14 +1,17 @@
 .submenu {
-  visibility: visible; 
-  /* opacity: 0;  */
+  visibility: hidden;
+  opacity: 0;
+  max-height: 200px;
+  max-width: 200px;
   transition: opacity 0.3s ease, transform 0.3s ease;
   position: absolute;
   overflow-y: auto;
   padding: 10px;
   border-radius: 0 5px 5px 5px;
-  left: 45px; 
+  left: 50px; 
   top: 0;
   width: 150px;
+  max-width: 200px;
   box-shadow: 4px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
@@ -16,11 +19,17 @@
   margin: 0;
 }
 
+.submenu.visible {
+  visibility: visible;
+  opacity: 1; 
+  transform: translateY(0); 
+}
+
 .submenuButton {
   width: 100%;
   background: none;
   border: none;
-  text-align: left;
+  text-align: center;
   padding: 10px;
   cursor: pointer;
   font-size: 14px;

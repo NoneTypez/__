@@ -50,6 +50,7 @@ table {
 * {
 	box-sizing: border-box;
 	text-decoration: none;
+  cursor: default;
 }
 
 html, body {
@@ -60,7 +61,6 @@ html, body {
 button { 
 	all: unset; 
 	display: inline-block; 
-	cursor: pointer; 
 }
 
 :root {
@@ -96,7 +96,6 @@ body {
   font-variant: small-caps;
   text-transform: none;
   background-color: #040404;
-  cursor: default;
 }
 
 #root {
