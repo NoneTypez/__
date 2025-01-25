@@ -1,5 +1,5 @@
 // import { useState } from 'react'
-import "./App.css";
+import Dashboard from "./coompositions/pages/dashboard/dashboard";
 import Sidebar from "./coompositions/sideBar/Sidebar";
 import Window from "./coompositions/window/Window";
 import { WindowAppearance } from "./enums";
@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <Sidebar />
-      <Window appearance={WindowAppearance.main} />
+      <Window appearance={WindowAppearance.main} children={<Dashboard />} />
     </>
   );
 }
