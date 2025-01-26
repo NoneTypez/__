@@ -3,7 +3,7 @@ import cn from "classnames";
 import styles from "./TableComposition.module.css";
 import { ButtonAppearance, CheckboxAppearance } from "../../enums";
 import Checkbox from "../../components/checkbox/CheckBox";
-import Button from "../../components/button/Button";
+import Button from "../../components/button/button";
 
 function Profiles({ data }: ITableComposition): JSX.Element {
   return (

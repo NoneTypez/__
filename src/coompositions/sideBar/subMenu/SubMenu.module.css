@@ -13,16 +13,19 @@
   width: 150px;
   max-width: 200px;
   box-shadow: 4px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  z-index: 9999;
 }
 
 .submenuItem {
   margin: 0;
+
 }
 
 .submenu.visible {
   visibility: visible;
   opacity: 1; 
   transform: translateY(0); 
+  z-index: 9999;
 }
 
 .submenuButton {
@@ -31,8 +34,8 @@
   border: none;
   text-align: center;
   padding: 10px;
-  cursor: pointer;
   font-size: 14px;
+  /* z-index: 9999; */
 }
 
 .submenuButton:hover {
