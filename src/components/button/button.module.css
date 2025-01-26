@@ -14,7 +14,29 @@
 }
 
 .base {
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding: 5px;
+}
+.base:hover {
+  color: #bbbbbb
 }
 
+.grey {
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+.grey:hover {
+  border-bottom: 2px solid rgb(235, 234, 234);
+  color: rgb(235, 234, 234);
+}
+
+.blue {
+  background-color: #0f73b9;
+  border-radius: 5px;
+  padding: 5px;
+  color: rgb(194, 193, 193);
+}
+
+.blue:hover {
+  background-color: #4794ca;
+  color: rgb(235, 234, 234);
+}

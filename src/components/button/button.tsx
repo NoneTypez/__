@@ -12,16 +12,29 @@ function Button({
 }: IButtonProps): JSX.Element {
   const [isSubMenuVisible, setIsSubMenuVisible] = useState(false);
 
+  const buttonContent = (
+    <button className={cn(styles[appearance])}>
+      {icon && <span className="icon">{icon}</span>}
+      {text && <span>{text}</span>}
+    </button>
+  );
+
+  if (appearance != "base") {
+    return (
+      <>
+        {buttonContent}
+        <SubMenu menuKey={subMenuButton} isVisible={isSubMenuVisible} />
+      </>
+    );
+  }
+
   return (
     <li
       className={cn(styles.sidebar)}
       onMouseEnter={() => setIsSubMenuVisible(true)}
       onMouseLeave={() => setIsSubMenuVisible(false)}
     >
-      <button className={cn(styles[appearance])}>
-        {icon && <span className="icon">{icon}</span>}
-        {text && <span>{text}</span>}
-      </button>
+      {buttonContent}
       <SubMenu menuKey={subMenuButton} isVisible={isSubMenuVisible} />
     </li>
   );

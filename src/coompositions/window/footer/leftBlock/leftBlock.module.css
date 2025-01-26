@@ -1,0 +1,8 @@
+.main {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #878787;
+  font-size: 12px;
+}

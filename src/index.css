@@ -31,7 +31,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
-ol, ul {
+ol, ul, li{
 	list-style: none;
 }
 blockquote, q {
@@ -93,6 +93,7 @@ body {
   font-weight:400;
   text-decoration: none;
   font-style: normal;
+  /* font-size: calc(10px + 1vw);; */
   font-variant: small-caps;
   text-transform: none;
   background-color: #040404;
@@ -106,5 +107,19 @@ body {
   background-color: #040404;
   padding: 10px;
 }
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+  opacity: 0; /* Скрыть скроллбар по умолчанию */
+  transition: opacity 0.3s ease;
+}
 
+/* Настройки для ползунка */
+::-webkit-scrollbar-thumb {
+  background-color: #3498db;
+  border-radius: 10px;
+}
 
+::-webkit-scrollbar-thumb:hover {
+  background-color: #2980b9;
+}
