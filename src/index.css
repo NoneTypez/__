@@ -62,6 +62,16 @@ button {
 	all: unset; 
 	display: inline-block; 
 }
+a {
+  text-decoration: none;  /* Убирает подчеркивание */
+  color: inherit;         /* Убирает цвет (сделает ссылку того же цвета, что и текст) */
+  outline: none;          /* Убирает обводку при фокусе */
+  border: none;           /* Убирает любые границы */
+  background: none;       /* Убирает фон */
+  padding: 0;             /* Убирает внутренние отступы */
+  margin: 0;              /* Убирает внешние отступы */
+  cursor: pointer;       /* Устанавливает курсор в виде указателя */
+}
 
 :root {
   /* text font and size  */
@@ -105,7 +115,7 @@ body {
   display: flex;
   flex-direction: row;
   background-color: #040404;
-  padding: 10px;
+  padding: 5px
 }
 ::-webkit-scrollbar {
   width: 3px;

@@ -1,4 +1,105 @@
 .main {
-  display: flex;
-  flex-direction: column;
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  color: #717171;
+}
+
+.checkBoxHeader {
+  width: 2%;
+  text-align: left;
+}
+.numberHeader {
+  width: 4%;
+}
+.nameHeader {
+  width: 10%;
+}
+.emailHeader {
+  width: 16%;
+}
+.twitterHeader {
+  width: 12%;
+}
+.discordHeader {
+  width: 12%;
+}
+.telegramHeader {
+  width: 12%;
+}
+.telephoneHeader {
+  width: 12%;
+}
+.githubHeader {
+  width: 12%;
+}
+.balanceHeader {
+  width: 12%;
+}
+.emptyHeader {
+  width: 100px;
+}
+
+table {
+  width: 100%;
+  table-layout: fixed; /* Для стабильной ширины столбцов */
+  
+}
+
+.light {
+  background-color: #2a272a;
+}
+
+.dark {
+  background-color: #211f21;
+}
+
+th {
+  color: #999;
+  padding: 8px;
+  text-align: center; 
+  
+}
+
+thead {
+  background-color: #3f3f3f;
+  
+}
+
+.header {
+  display: inline-flex;
+  
+}
+
+/* Стили для строк таблицы */
+td {
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  
+}
+
+tr {
+  /* Убираем display: flex для строк таблицы */
+  display: table-row;
+  height: 50px;
+
+}
+
+/* tbody tr:hover {
+  background-color: #ecf0f1;
+} */
+
+/* Стилизация пустых строк */
+td.empty {
+  background-color: #f0f0f0;
+  text-align: center;
+  font-style: italic;
+  color: #999;
+}
+
+/* Стиль для ячеек с активным контентом */
+td.active {
+  background-color: #e7f7ff;
+  font-weight: bold;
 }

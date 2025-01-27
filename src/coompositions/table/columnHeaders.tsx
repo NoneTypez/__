@@ -1,39 +1,48 @@
 import Checkbox from "../../components/checkbox/CheckBox";
-import SortColumn from "../../components/sortColumn/SortColumn";
 import { CheckboxAppearance } from "../../enums";
+import SortIcon from "./sortIcon/SortIcon";
+import cn from "classnames";
+import styles from "./TableComposition.module.css";
 
 function TableHeaders(): JSX.Element {
   // USESTATE FOR SELECTED OPTION!!!!##########
   return (
     <>
       <tr>
-        <th>
+        <th className={cn(styles.checkBoxHeader)}>
           <Checkbox appearance={CheckboxAppearance.tableCheckbox} />
         </th>
-        <th>
-          <span>
+        <th className={cn(styles.numberHeader)}>
+          <span className={cn(styles.header)}>
             #
-            <SortColumn />
+            <a href="#">
+              <SortIcon />
+            </a>
           </span>
         </th>
-        <th>
-          <span>
+        <th className={cn(styles.nameHeader)}>
+          <span className={cn(styles.header)}>
             NAME
-            <SortColumn />
+            <a href="#">
+              <SortIcon />
+            </a>
           </span>
         </th>
-        <th>EMAIL</th>
-        <th>TWITTER</th>
-        <th>DISCORD</th>
-        <th>TELEGRAM</th>
-        <th>TELEPHONE</th>
-        <th>GITHUB</th>
-        <th>
-          <span>
+        <th className={cn(styles.emailHeader)}>EMAIL</th>
+        <th className={cn(styles.twitterHeader)}>TWITTER</th>
+        <th className={cn(styles.discordHeader)}>DISCORD</th>
+        <th className={cn(styles.telegramHeader)}>TELEGRAM</th>
+        <th className={cn(styles.telephoneHeader)}>TELEPHONE</th>
+        <th className={cn(styles.githubHeader)}>GITHUB</th>
+        <th className={cn(styles.balanceHeader)}>
+          <span className={cn(styles.header)}>
             BALANCE
-            <SortColumn />
+            <a href="#">
+              <SortIcon />
+            </a>
           </span>
         </th>
+        <th className={cn(styles.emptyHeader)}></th>
       </tr>
     </>
   );

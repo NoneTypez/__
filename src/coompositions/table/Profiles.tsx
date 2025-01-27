@@ -3,7 +3,7 @@ import cn from "classnames";
 import styles from "./TableComposition.module.css";
 import { ButtonAppearance, CheckboxAppearance } from "../../enums";
 import Checkbox from "../../components/checkbox/CheckBox";
-import Button from "../../components/button/button";
+import Button from "../../components/button/Button";
 
 function Profiles({ data }: ITableComposition): JSX.Element {
   return (
@@ -43,12 +43,7 @@ function Profiles({ data }: ITableComposition): JSX.Element {
             <td>{github || ""}</td>
             <td>{balance}</td>
             <td>
-              {
-                <Button
-                  appearance={ButtonAppearance.profileDetails}
-                  text="Details"
-                />
-              }
+              {<Button appearance={ButtonAppearance.grey} text="Details" />}
             </td>
           </tr>
         )
