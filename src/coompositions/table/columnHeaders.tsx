@@ -34,7 +34,7 @@ function TableHeaders(): JSX.Element {
         <th className={cn(styles.telegramHeader)}>TELEGRAM</th>
         <th className={cn(styles.telephoneHeader)}>TELEPHONE</th>
         <th className={cn(styles.githubHeader)}>GITHUB</th>
-        <th className={cn(styles.balanceHeader)}>
+        <th>
           <span className={cn(styles.header)}>
             BALANCE
             <a href="#">
@@ -42,7 +42,7 @@ function TableHeaders(): JSX.Element {
             </a>
           </span>
         </th>
-        <th className={cn(styles.emptyHeader)}></th>
+        <th></th>
       </tr>
     </>
   );
