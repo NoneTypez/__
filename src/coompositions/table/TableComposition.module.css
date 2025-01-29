@@ -75,3 +75,11 @@ td.active {
 .row {
   border-radius: 10px;
 }
+/* Уменьшаем размер чекбокса */
+/* Уменьшаем размер контейнера и иконки */
+.p-checkbox-icon {
+  background-color: black;
+}
+.p-checkbox-box {
+  background-color: black;
+}

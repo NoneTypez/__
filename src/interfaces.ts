@@ -38,6 +38,8 @@ interface IRowData {
 
 export interface ITableComposition {
   data: IRowData[];
+  checkedItems: Record<number, boolean>;
+  onToggleItem: (id: number) => void;
 }
 
 export interface ISubMenus {

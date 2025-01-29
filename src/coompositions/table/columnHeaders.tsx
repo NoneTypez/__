@@ -1,16 +1,31 @@
-import Checkbox from "../../components/checkbox/CheckBox";
-import { CheckboxAppearance } from "../../enums";
 import SortIcon from "./sortIcon/SortIcon";
 import cn from "classnames";
 import styles from "./TableComposition.module.css";
+import { Checkbox } from "primereact/checkbox";
+import "primereact/resources/themes/saga-blue/theme.css";
 
-function TableHeaders(): JSX.Element {
+interface ITableHeaders {
+  isAllChecked: boolean;
+  onToggleAll: () => void;
+}
+
+function TableHeaders({
+  isAllChecked,
+  onToggleAll,
+}: ITableHeaders): JSX.Element {
   // USESTATE FOR SELECTED OPTION!!!!##########
   return (
     <>
       <tr>
-        <th className={cn(styles.checkBoxHeader)}>
-          <Checkbox appearance={CheckboxAppearance.tableCheckbox} />
+        <th>
+          {
+            <Checkbox
+              checked={isAllChecked}
+              onChange={onToggleAll}
+              className={cn(styles["p-checkbox-box"])}
+              variant="filled"
+            />
+          }
         </th>
         <th className={cn(styles.numberHeader)}>
           <span className={cn(styles.header)}>

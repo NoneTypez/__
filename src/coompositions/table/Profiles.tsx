@@ -1,11 +1,16 @@
 import { ITableComposition } from "../../interfaces";
 import cn from "classnames";
 import styles from "./TableComposition.module.css";
-import { ButtonAppearance, CheckboxAppearance } from "../../enums";
-import Checkbox from "../../components/checkbox/CheckBox";
+import { ButtonAppearance } from "../../enums";
 import Button from "../../components/button/Button";
+import { Checkbox } from "primereact/checkbox";
+import "primereact/resources/themes/saga-blue/theme.css";
 
-function Profiles({ data }: ITableComposition): JSX.Element {
+function Profiles({
+  data,
+  checkedItems,
+  onToggleItem,
+}: ITableComposition): JSX.Element {
   return (
     <>
       {data.map(
@@ -31,7 +36,12 @@ function Profiles({ data }: ITableComposition): JSX.Element {
             })}
           >
             <td>
-              <Checkbox appearance={CheckboxAppearance.tableCheckbox} />
+              {
+                <Checkbox
+                  checked={checkedItems[id] || false}
+                  onChange={() => onToggleItem(id)}
+                />
+              }
             </td>
             <td>{id}</td>
             <td>{profileName || ""}</td>
