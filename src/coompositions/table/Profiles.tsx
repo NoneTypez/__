@@ -51,7 +51,7 @@ function Profiles({
             <td>{telegram || ""}</td>
             <td>{telephone || ""}</td>
             <td>{github || ""}</td>
-            <td>{balance}</td>
+            <td>{Number(balance)}$</td>
             <td>
               {<Button appearance={ButtonAppearance.grey} text="Details" />}
             </td>

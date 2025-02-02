@@ -5,10 +5,26 @@ import styles from "./TableComposition.module.css";
 import cn from "classnames";
 import { useState } from "react";
 import "primereact/resources/themes/saga-blue/theme.css";
+import { IHeadersValues } from "../../interfaces";
 
 function TableComposition(): JSX.Element {
   const [checkedItems, setCheckedItems] = useState<Record<number, boolean>>({});
   const [isAllChecked, setIsAllChecked] = useState(false);
+
+  const [profiles, setProfiles] = useState(testData);
+
+  const sortProfiles = (key: keyof IHeadersValues, ascending: boolean) => {
+    const sorted = [...profiles].sort((a, b) => {
+      const aValue = key === "balance" ? Number(a[key]) : a[key];
+      const bValue = key === "balance" ? Number(b[key]) : b[key];
+
+      if (aValue < bValue) return ascending ? -1 : 1;
+      if (aValue > bValue) return ascending ? 1 : -1;
+      return 0;
+    });
+
+    setProfiles(sorted);
+  };
 
   const handleToggleAll = () => {
     const newCheckedState = !isAllChecked;
@@ -39,11 +55,12 @@ function TableComposition(): JSX.Element {
           <TableHeaders
             isAllChecked={isAllChecked}
             onToggleAll={handleToggleAll}
+            onSort={sortProfiles}
           />
         </thead>
         <tbody>
           <Profiles
-            data={testData}
+            data={profiles}
             checkedItems={checkedItems}
             onToggleItem={handleToggleItem}
           />

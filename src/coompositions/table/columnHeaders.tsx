@@ -3,15 +3,18 @@ import cn from "classnames";
 import styles from "./TableComposition.module.css";
 import { Checkbox } from "primereact/checkbox";
 import "primereact/resources/themes/saga-blue/theme.css";
+import { IHeadersValues } from "../../interfaces";
 
 interface ITableHeaders {
   isAllChecked: boolean;
   onToggleAll: () => void;
+  onSort: (key: keyof IHeadersValues, ascending: boolean) => void;
 }
 
 function TableHeaders({
   isAllChecked,
   onToggleAll,
+  onSort,
 }: ITableHeaders): JSX.Element {
   // USESTATE FOR SELECTED OPTION!!!!##########
   return (
@@ -31,7 +34,7 @@ function TableHeaders({
           <span className={cn(styles.header)}>
             #
             <a href="#">
-              <SortIcon />
+              <SortIcon onClick={(asc) => onSort("id", asc)} />
             </a>
           </span>
         </th>
@@ -39,7 +42,7 @@ function TableHeaders({
           <span className={cn(styles.header)}>
             NAME
             <a href="#">
-              <SortIcon />
+              <SortIcon onClick={(asc) => onSort("profileName", asc)} />
             </a>
           </span>
         </th>
@@ -53,7 +56,7 @@ function TableHeaders({
           <span className={cn(styles.header)}>
             BALANCE
             <a href="#">
-              <SortIcon />
+              <SortIcon onClick={(asc) => onSort("balance", asc)} />
             </a>
           </span>
         </th>

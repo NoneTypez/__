@@ -31,7 +31,7 @@ const testData: IHeadersValues[] = [
     telegram: "@johndoe",
     telephone: "123456789",
     github: "johndoe",
-    balance: "10000 $",
+    balance: "10000",
   },
   {
     id: 2,
@@ -42,7 +42,7 @@ const testData: IHeadersValues[] = [
     telegram: "",
     telephone: "987654321",
     github: "janesmith",
-    balance: "200$",
+    balance: "200",
   },
   {
     id: 3,
@@ -53,7 +53,7 @@ const testData: IHeadersValues[] = [
     telegram: "",
     telephone: "987654321",
     github: "janesmith",
-    balance: "300$",
+    balance: "300",
   },
 ];
 

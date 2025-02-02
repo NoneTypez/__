@@ -1,13 +1,17 @@
 import { useState } from "react";
-import SortIconProps from "./sortIconProps";
 import { FaSortUp, FaSortDown } from "react-icons/fa";
 
+interface SortIconProps {
+  onClick: (isAscending: boolean) => void;
+}
+
 function SortIcon({ onClick }: SortIconProps): JSX.Element {
-  const [isAscending, setIsAscending] = useState(true); // Состояние для отслеживания порядка сортировки
+  const [isAscending, setIsAscending] = useState(true);
 
   const handleClick = () => {
-    setIsAscending((prev) => !prev); // Меняем состояние на противоположное
-    if (onClick) onClick(); // Если передан onClick, вызываем его
+    const newDirection = !isAscending;
+    setIsAscending(newDirection);
+    onClick(newDirection); // Передаем состояние вверх
   };
 
   return (
@@ -17,9 +21,9 @@ function SortIcon({ onClick }: SortIconProps): JSX.Element {
       style={{ border: "none", cursor: "pointer" }}
     >
       {isAscending ? (
-        <FaSortUp style={{ color: "#999", transition: "color 0.3s ease" }} />
+        <FaSortUp style={{ color: "#999" }} />
       ) : (
-        <FaSortDown style={{ color: "#999", transition: "color 0.3s ease" }} />
+        <FaSortDown style={{ color: "#999" }} />
       )}
     </button>
   );
