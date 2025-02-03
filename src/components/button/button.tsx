@@ -9,11 +9,12 @@ function Button({
   icon,
   appearance,
   subMenuButton = "",
+  ...props
 }: IButtonProps): JSX.Element {
   const [isSubMenuVisible, setIsSubMenuVisible] = useState(false);
 
   const buttonContent = (
-    <button className={cn(styles[appearance])}>
+    <button className={cn(styles[appearance])} {...props}>
       {icon && <span className="icon">{icon}</span>}
       {text && <span>{text}</span>}
     </button>

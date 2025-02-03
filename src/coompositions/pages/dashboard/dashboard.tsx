@@ -22,12 +22,17 @@ function Dashboard(): JSX.Element {
           <Button
             text="ADD WALLET"
             appearance={ButtonAppearance.blue}
-            onClick={() => setIsPopupOpen(true)}
+            onClick={() => {
+              console.log("Button clicked!");
+              setIsPopupOpen(true);
+            }}
           />
           <Popup
             isOpen={isPopupOpen}
             onClose={() => setIsPopupOpen(false)}
             children={<AddWalletPopUp />}
+            width={400}
+            height={600}
           />
         </div>
       </div>
