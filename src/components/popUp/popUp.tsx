@@ -19,9 +19,11 @@ function Popup({
         style={{ width: width || 400, height: height || "auto" }}
         onClick={(e) => e.stopPropagation()}
       >
-        <button className={cn(styles.closeButton)} onClick={onClose}>
-          ✖
-        </button>
+        <div className={cn(styles.closediv)}>
+          <button className={cn(styles.closeButton)} onClick={onClose}>
+            ✖
+          </button>
+        </div>
         {children}
       </div>
     </div>,

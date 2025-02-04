@@ -31,8 +31,8 @@ function Dashboard(): JSX.Element {
             isOpen={isPopupOpen}
             onClose={() => setIsPopupOpen(false)}
             children={<AddWalletPopUp />}
-            width={400}
-            height={600}
+            width={600}
+            height={700}
           />
         </div>
       </div>
