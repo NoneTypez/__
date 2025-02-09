@@ -135,7 +135,9 @@ function AddWalletPopUp({ children }: IAddWalletPopUpProps): JSX.Element {
             <label htmlFor="evm" className={cn(styles.placeholder)}>
               evm
             </label>
+            <span className={cn(styles.address)}>address:</span>
           </div>
+          <Button appearance={ButtonAppearance.grey} text="generate" />
         </div>
         {/* SOLANA */}
         <div className={cn(styles.form)}>
@@ -151,7 +153,9 @@ function AddWalletPopUp({ children }: IAddWalletPopUpProps): JSX.Element {
             <label htmlFor="email" className={cn(styles.placeholder)}>
               solana
             </label>
+            <span className={cn(styles.address)}>address:</span>
           </div>
+          <Button appearance={ButtonAppearance.grey} text="generate" />
         </div>
         {/* BTC */}
         <div className={cn(styles.form)}>
@@ -167,7 +171,9 @@ function AddWalletPopUp({ children }: IAddWalletPopUpProps): JSX.Element {
             <label htmlFor="btc" className={cn(styles.placeholder)}>
               btc
             </label>
+            <span className={cn(styles.address)}>address:</span>
           </div>
+          <Button appearance={ButtonAppearance.grey} text="generate" />
         </div>
         {/* ATOM */}
         <div className={cn(styles.form)}>
@@ -183,12 +189,16 @@ function AddWalletPopUp({ children }: IAddWalletPopUpProps): JSX.Element {
             <label htmlFor="atom" className={cn(styles.placeholder)}>
               atom
             </label>
+            <span className={cn(styles.address)}>
+              address: 0xAe99cA2b7C75Daf396b2Ad27d5e59D9a5119445B
+            </span>
           </div>
+          <Button appearance={ButtonAppearance.grey} text="generate" />
         </div>
       </div>
       <div className={cn(styles.bottomBlock)}>
-        <Button appearance={ButtonAppearance.blue} text="CANCEL" />
-        <Button appearance={ButtonAppearance.blue} text="CREATE" />
+        <Button appearance={ButtonAppearance.cancelBtn} text="CANCEL" />
+        <Button appearance={ButtonAppearance.modBtn} text="CREATE" />
       </div>
     </>
   );

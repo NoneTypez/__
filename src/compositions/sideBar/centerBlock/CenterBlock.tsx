@@ -1,6 +1,6 @@
 import cn from "classnames";
 import styles from "../Sidebar.module.css";
-import Button from "../../../components/button/Button";
+import Button from "../../../components/button/button";
 import { ButtonAppearance, SvgIconAppearance } from "../../../enums";
 import { icons } from "../../../models";
 import SvgIcon from "../../../components/svgIcon/SvgIcon";

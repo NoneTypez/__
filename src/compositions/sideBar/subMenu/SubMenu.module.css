@@ -4,16 +4,17 @@
   max-height: 300px;
   transition: opacity 0.3s ease, transform 0.3s ease;
   position: absolute;
-  /* overflow-y: auto; */
-  overflow:auto;
-  padding: 10px;
+  overflow: auto;
   border-radius: 5px;
+  min-width: 150px;
+  max-width: 250px;
   left: 50px; 
   top: 0;
   box-shadow: 4px 0px 10px 0px rgba(0, 0, 0, 0.5);
   background-color: #2a272a;
   border: 10px solid rgba(0, 0, 0, 0.0);
   z-index: 1;
+  cursor: pointer;
 }
 
 .submenuItem {
@@ -25,17 +26,21 @@
   visibility: visible;
   opacity: 1; 
   transform: translateY(0); 
+  z-index: 1000;
 }
 
 .submenuButton {
-  width: 100%;
+  width: 95%;
   background: none;
-  border: none;
   text-align: center;
-  padding: 10px;
-  font-size: 14px;
+  box-sizing: border-box;
+  padding: 10px 0;
+  font-size: clamp(14px, 1vw, 14px); /* Минимальный 12px, максимум 14px */
+  border-radius: 5px;
+
 }
 
 .submenuButton:hover {
-  background-color: #f0f0f0;
+  background-color: rgba(92, 93, 93, 0.5);
+  color: #bbbbbb;
 }

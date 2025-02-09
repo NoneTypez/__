@@ -21,7 +21,7 @@ function Dashboard(): JSX.Element {
         <div className={styles.top_right_container}>
           <Button
             text="ADD WALLET"
-            appearance={ButtonAppearance.blue}
+            appearance={ButtonAppearance.modBtn}
             onClick={() => {
               console.log("Button clicked!");
               setIsPopupOpen(true);

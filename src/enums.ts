@@ -2,6 +2,8 @@ export enum ButtonAppearance {
   grey = "grey",
   blue = "blue",
   base = "base",
+  modBtn = "modBtn",
+  cancelBtn = "cancelBtn",
   profileDetails = "profileDetails",
 }
 

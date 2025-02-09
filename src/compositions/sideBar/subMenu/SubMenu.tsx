@@ -1,30 +1,36 @@
-import Button from "../../../components/button/Button";
+import { useState } from "react";
+import Button from "../../../components/button/button";
 import { ButtonAppearance } from "../../../enums";
 import { SubMenuProps } from "./SubMenu.props";
 import cn from "classnames";
 import styles from "./SubMenu.module.css";
 import { subMenus } from "../../../models";
+import { useNavigate } from "react-router-dom";
 
-function SubMenu({ menuKey, isVisible }: SubMenuProps): JSX.Element {
+function SubMenu({ menuKey, isVisible }: SubMenuProps): JSX.Element | null {
+  const [isHovered, setIsHovered] = useState(false);
   const menuItems = subMenus[menuKey];
+  const navigate = useNavigate();
 
   if (!menuItems || menuItems.length === 0) {
-    return <></>;
+    return null;
   }
 
   return (
     <ul
       className={cn(styles.submenu, {
-        [styles.visible]: isVisible,
+        [styles.visible]: isVisible || isHovered,
       })}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setTimeout(() => setIsHovered(false), 300)}
     >
       {menuItems.map((item, index) => (
         <li key={index} className={cn(styles.submenuItem)}>
           <Button
-            appearance={ButtonAppearance.base}
+            appearance={ButtonAppearance.grey}
             className={styles.submenuButton}
             text={item.text}
-            onClick={item.onclick}
+            onClick={() => navigate(`${item.to}`)}
           />
         </li>
       ))}

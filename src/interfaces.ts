@@ -43,22 +43,22 @@ export interface ITableComposition {
 }
 
 export interface ISubMenus {
-  [key: string]: { text: string; onclick: () => void }[];
+  [key: string]: { text: string; to: string }[];
   exchange: {
     text: string;
-    onclick: () => void;
+    to: string;
   }[];
   projects: {
     text: string;
-    onclick: () => void;
+    to: string;
   }[];
   scripts: {
     text: string;
-    onclick: () => void;
+    to: string;
   }[];
   other: {
     text: string;
-    onclick: () => void;
+    to: string;
   }[];
   table: never[];
 }

@@ -1,7 +1,7 @@
 import { IButtonProps } from "./button.props";
 import styles from "./Button.module.css";
 import cn from "classnames";
-import SubMenu from "../../coompositions/sideBar/subMenu/SubMenu";
+import SubMenu from "../../compositions/sideBar/subMenu/SubMenu";
 import { useState } from "react";
 
 function Button({

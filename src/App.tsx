@@ -1,17 +1,20 @@
-// import { useState } from 'react'
-import Dashboard from "./coompositions/pages/dashboard/dashboard";
-import Sidebar from "./coompositions/sideBar/Sidebar";
-import Window from "./coompositions/window/Window";
-import { WindowAppearance } from "./enums";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import Sidebar from "./compositions/sideBar/Sidebar";
+import Window from "./compositions/window/Window";
+import Dashboard from "./compositions/pages/dashboard/dashboard";
+import ErrorPage from "./compositions/pages/error/ErrorPage";
 
 function App() {
-  // const [count, setCount] = useState(0)
-
   return (
-    <>
+    <Router>
       <Sidebar />
-      <Window appearance={WindowAppearance.main} children={<Dashboard />} />
-    </>
+      <Window>
+        <Routes>
+          <Route path="" element={<Dashboard />} />
+          <Route path="*" element={<ErrorPage />} />
+        </Routes>
+      </Window>
+    </Router>
   );
 }
 

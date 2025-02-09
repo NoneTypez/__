@@ -1,12 +1,14 @@
 import cn from "classnames";
 import styles from "../Sidebar.module.css";
 import Logo from "../../../components/logo/Logo";
-import Button from "../../../components/button/Button";
+import Button from "../../../components/button/button";
 import { ButtonAppearance, SvgIconAppearance } from "../../../enums";
 import { icons } from "../../../models";
 import SvgIcon from "../../../components/svgIcon/SvgIcon";
+import { useNavigate } from "react-router-dom";
 
 function TopBlock(): JSX.Element {
+  const navigate = useNavigate();
   return (
     <ul className={cn(styles.block, styles.topblock)}>
       <Logo src="src/assets/logo.png" />
@@ -19,6 +21,7 @@ function TopBlock(): JSX.Element {
             path={icons.dashboard}
           />
         }
+        onClick={() => navigate("")}
       />
     </ul>
   );

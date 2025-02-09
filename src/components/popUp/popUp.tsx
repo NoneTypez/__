@@ -10,20 +10,19 @@ function Popup({
   height,
   children,
 }: IPopupProps): JSX.Element | null {
-  if (!isOpen) return null;
-
   return ReactDOM.createPortal(
-    <div className={cn(styles.overlay)} onClick={onClose}>
+    <div
+      className={cn(styles.overlay, { [styles.active]: isOpen })}
+      onClick={onClose}
+    >
       <div
-        className={cn(styles.popup)}
+        className={cn(styles.popup, { [styles.active]: isOpen })}
         style={{ width: width || 400, height: height || "auto" }}
         onClick={(e) => e.stopPropagation()}
       >
-        <div className={cn(styles.closediv)}>
-          <button className={cn(styles.closeButton)} onClick={onClose}>
-            ✖
-          </button>
-        </div>
+        <button className={styles.closeButton} onClick={onClose}>
+          ✖
+        </button>
         {children}
       </div>
     </div>,

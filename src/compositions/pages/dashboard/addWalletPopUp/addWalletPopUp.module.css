@@ -2,27 +2,35 @@
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
+  /* margin-top: 50px; */
 }
 
 .bottomBlock {
   z-index: 1000;
-  top: 100px;
+  /* margin: 5px; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  text-align: center;
-  align-content: center;
-  height: 5%;
-  width: 60%;
-  
+  /* height: 20px; */
+  width: 100%;
+  padding: 10px 50px;  
+  align-items: center;
+  /* background-color: rgba(255, 255, 255, 0.2); */
+  backdrop-filter: blur(50px);
 }
 
 
 .form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   border-radius: 20px;
   box-sizing: border-box;
-  /* padding: 20px; */
-  width: 550px;
+  align-items: center;
+  gap: 20px;
+  box-sizing: border-box;
+  width: 500px;
+  padding-right: 10px;
 }
 
 .title {
@@ -30,7 +38,7 @@
   font-family: sans-serif;
   font-size: 36px;
   font-weight: 600;
-  margin-top: 30px;
+  /* margin-top: 30px; */
 }
 
 .subtitle {
@@ -48,7 +56,7 @@
 }
 
 .ic1 {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .ic2 {
@@ -63,13 +71,11 @@
   color: #eee;
   font-size: 18px;
   height: 80%;
-  /* outline: 0; */
   padding: 4px 20px 0;
   width: 100%;
 }
 
 .cut {
-  /* background-color: #2a272a; */
   border-radius: 10px;
   height: 20px;
   left: 20px;
@@ -132,4 +138,9 @@
 
 .submit:active {
   background-color: #06b;
+}
+
+.address {
+  color: rgb(146, 145, 143);
+  font-size: 13px;
 }
