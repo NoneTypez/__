@@ -3,13 +3,7 @@ import cn from "classnames";
 import styles from "./TableComposition.module.css";
 import { Checkbox } from "primereact/checkbox";
 import "primereact/resources/themes/saga-blue/theme.css";
-import { IHeadersValues } from "../../interfaces";
-
-interface ITableHeaders {
-  isAllChecked: boolean;
-  onToggleAll: () => void;
-  onSort: (key: keyof IHeadersValues, ascending: boolean) => void;
-}
+import { ITableHeaders } from "../../../../interfaces";
 
 function TableHeaders({
   isAllChecked,

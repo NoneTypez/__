@@ -1,11 +1,11 @@
 import TableHeaders from "./columnHeaders";
 import Profiles from "./Profiles";
-import { testData } from "../../models";
+import { testData } from "../../../../models";
 import styles from "./TableComposition.module.css";
 import cn from "classnames";
 import { useState } from "react";
 import "primereact/resources/themes/saga-blue/theme.css";
-import { IHeadersValues } from "../../interfaces";
+import { IHeadersValues } from "../../../../interfaces";
 
 function TableComposition(): JSX.Element {
   const [checkedItems, setCheckedItems] = useState<Record<number, boolean>>({});
@@ -48,8 +48,11 @@ function TableComposition(): JSX.Element {
     });
   };
 
+  const selectedProfilesCount =
+    Object.values(checkedItems).filter(Boolean).length;
+
   return (
-    <>
+    <div className={cn(styles.tableContainer)}>
       <table className={cn(styles.main)}>
         <thead>
           <TableHeaders
@@ -66,7 +69,14 @@ function TableComposition(): JSX.Element {
           />
         </tbody>
       </table>
-    </>
+      {selectedProfilesCount != 0 && (
+        <div className={cn(styles.countOfObjectDiv)}>
+          <span className={cn(styles.countOfObject)}>
+            selected: {selectedProfilesCount}
+          </span>
+        </div>
+      )}
+    </div>
   );
 }
 

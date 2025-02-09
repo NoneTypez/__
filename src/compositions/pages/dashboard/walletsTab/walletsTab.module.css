@@ -1,0 +1,128 @@
+.top_nav_container {
+  display: flex;
+  justify-content: center; /* Выравнивание кнопок по горизонтали */
+  align-items: center; /* Центрирование кнопок по вертикали */
+  height: 17px;
+  gap: 50px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+/* Общий стиль для таблицы */
+.main {
+  align-items: center;
+  border-collapse: collapse; 
+  font-family: Arial, sans-serif;
+  color: #717171;
+}
+table {
+  width: 80%;
+}
+/* Применение округленных углов для строк */
+tr {
+  display: table-row;;
+  height: 50px;
+}
+
+/* Округление углов первой и последней ячейки в каждой строке */
+tr:first-child td:first-child {
+  border-top-left-radius: 10px; /* Округление верхнего левого угла первой строки */
+}
+
+tr:first-child td:last-child {
+  border-top-right-radius: 10px; /* Округление верхнего правого угла первой строки */
+}
+
+tr:last-child td:first-child {
+  border-bottom-left-radius: 10px; /* Округление нижнего левого угла последней строки */
+}
+
+tr:last-child td:last-child {
+  border-bottom-right-radius: 10px; /* Округление нижнего правого угла последней строки */
+}
+
+/* Стиль для строк с чередующимся фоном */
+.light {
+  background-color: #2a272a;
+}
+
+.dark {
+  background: linear-gradient(70deg, rgba(42,39,42,1) 0%, rgba(33,31,33,1) 50%, rgba(42,39,42,1) 100%);
+}
+
+/* Стили для ячеек таблицы */
+td {
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  vertical-align: middle; /* Выравнивание по вертикали */
+}
+
+/* Стили для заголовков */
+th {
+  color: #999;
+  padding: 8px;
+  text-align: center;
+  vertical-align: middle; /* Выравнивание по вертикали для заголовков */
+}
+
+thead {
+  background: linear-gradient(70deg, rgba(42,39,42,1) 0%, rgba(63,63,63,0.4241486068111455) 50%, rgba(42,39,42,1) 100%);}
+
+/* Стиль для пустых строк */
+td.empty {
+  background-color: #f0f0f0;
+  text-align: center;
+  font-style: italic;
+  color: #999;
+}
+
+/* Стиль для ячеек с активным контентом */
+td.active {
+  background-color: #e7f7ff;
+  font-weight: bold;
+}
+
+/* Стили для строк таблицы */
+.row {
+  border-radius: 10px;
+}
+/* Уменьшаем размер чекбокса */
+/* Уменьшаем размер контейнера и иконки */
+.p-checkbox-icon {
+  background-color: black;
+}
+.p-checkbox-box {
+  background-color: black;
+}
+
+.countOfObjectDiv {
+  position: fixed;
+  top: 20px;
+  left: 500px;
+  height: 100px;
+  color: rgb(162, 162, 162);
+}
+
+.tableContainer {
+  width: 80%;
+  max-height: 700px; /* Ограничение по высоте, можно подстроить */
+  overflow-y: auto;  
+}
+
+table {
+  width: 100%;
+}
+
+thead {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}

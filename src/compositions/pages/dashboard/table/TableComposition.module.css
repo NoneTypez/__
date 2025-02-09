@@ -83,3 +83,24 @@ td.active {
 .p-checkbox-box {
   background-color: black;
 }
+
+.countOfObjectDiv {
+  position: fixed;
+  top: 20px;
+  left: 500px;
+  height: 100px;
+  color: rgb(162, 162, 162);
+}
+
+.tableContainer {
+  max-height: 750px; 
+  overflow-y: auto;  
+  width: 100%;
+}
+
+
+thead {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}

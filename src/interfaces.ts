@@ -24,6 +24,12 @@ export interface IHeadersValues {
   balance: string;
 }
 
+export interface IWalletsValues {
+  id: number;
+  address: string;
+  balance: string;
+}
+
 interface IRowData {
   id: number;
   profileName?: string;
@@ -61,4 +67,22 @@ export interface ISubMenus {
     to: string;
   }[];
   table: never[];
+}
+
+export interface ITableHeaders {
+  isAllChecked: boolean;
+  onToggleAll: () => void;
+  onSort: (key: keyof IHeadersValues, ascending: boolean) => void;
+}
+
+export interface IWalletList {
+  data: { id: number; address: string; balance: string }[];
+  checkedItems: Record<number, boolean>;
+  onToggleItem: (id: number) => void;
+}
+
+export interface IWalletsHeaders {
+  isAllChecked: boolean;
+  onToggleAll: () => void;
+  onSort: (key: keyof IWalletList, ascending: boolean) => void;
 }

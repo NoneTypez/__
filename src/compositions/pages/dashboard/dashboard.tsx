@@ -1,29 +1,47 @@
 import Button from "../../../components/button/button";
 import { ButtonAppearance } from "../../../enums";
-import TableComposition from "../../table/TableComposition";
+import TableComposition from "./table/TableComposition";
 import styles from "./dashboard.module.css";
 import cn from "classnames";
 import Popup from "../../../components/popUp/popUp";
 import { useState } from "react";
 import AddWalletPopUp from "./addWalletPopUp/addWalletPopUp";
+import SearchBox from "../../../components/searchBar/SearchBox";
+// import { useNavigate } from "react-router-dom";
+import WalletsComposition from "./walletsTab/WalletsComposition";
+
+const ProfilesTab = () => <TableComposition />;
+const WalletsTab = () => <WalletsComposition />;
 
 function Dashboard(): JSX.Element {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState(<TableComposition />);
+
+  const changeTab = (tabComponent: JSX.Element) => {
+    setActiveTab(tabComponent);
+  };
 
   return (
     <div className={cn(styles.main)}>
       <div className={cn(styles.top_container)}>
-        <div className={styles.top_left_container}>
-          <Button text="WALLETS" appearance={ButtonAppearance.grey} />
-          <Button text="SETTINGS" appearance={ButtonAppearance.grey} />
-          <Button text="TEST" appearance={ButtonAppearance.grey} />
+        <div className={cn(styles.top_left_container)}>
+          <Button
+            text="PROFILES"
+            appearance={ButtonAppearance.grey}
+            onClick={() => changeTab(<ProfilesTab />)}
+          />
+          <Button
+            text="WALLETS"
+            appearance={ButtonAppearance.grey}
+            onClick={() => changeTab(<WalletsTab />)}
+          />
+          <SearchBox />
         </div>
         <div className={styles.top_right_container}>
           <Button
             text="ADD WALLET"
             appearance={ButtonAppearance.modBtn}
             onClick={() => {
-              console.log("Button clicked!");
               setIsPopupOpen(true);
             }}
           />
@@ -36,9 +54,7 @@ function Dashboard(): JSX.Element {
           />
         </div>
       </div>
-      <div className={cn(styles.table_container)}>
-        <TableComposition />
-      </div>
+      <div className={cn(styles.tab_container)}>{activeTab}</div>
     </div>
   );
 }

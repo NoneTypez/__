@@ -7,7 +7,11 @@ import styles from "./SubMenu.module.css";
 import { subMenus } from "../../../models";
 import { useNavigate } from "react-router-dom";
 
-function SubMenu({ menuKey, isVisible }: SubMenuProps): JSX.Element | null {
+function SubMenu({
+  menuKey,
+  isVisible,
+  appearance = "horizontal",
+}: SubMenuProps): JSX.Element | null {
   const [isHovered, setIsHovered] = useState(false);
   const menuItems = subMenus[menuKey];
   const navigate = useNavigate();
@@ -16,9 +20,14 @@ function SubMenu({ menuKey, isVisible }: SubMenuProps): JSX.Element | null {
     return null;
   }
 
+  let mainStyle = styles.submenu;
+  if (appearance === "vertical") {
+    mainStyle = styles.submenuVertical;
+  }
+
   return (
     <ul
-      className={cn(styles.submenu, {
+      className={cn(mainStyle, {
         [styles.visible]: isVisible || isHovered,
       })}
       onMouseEnter={() => setIsHovered(true)}

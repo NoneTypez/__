@@ -1,8 +1,8 @@
-import { ITableComposition } from "../../interfaces";
+import { ITableComposition } from "../../../../interfaces";
 import cn from "classnames";
 import styles from "./TableComposition.module.css";
-import { ButtonAppearance } from "../../enums";
-import Button from "../../components/button/Button";
+import { ButtonAppearance } from "../../../../enums";
+import Button from "../../../../components/button/button";
 import { Checkbox } from "primereact/checkbox";
 import "primereact/resources/themes/saga-blue/theme.css";
 

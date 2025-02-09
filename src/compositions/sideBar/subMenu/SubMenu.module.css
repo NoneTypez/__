@@ -44,3 +44,26 @@
   background-color: rgba(92, 93, 93, 0.5);
   color: #bbbbbb;
 }
+
+.submenuVertical {
+  visibility: hidden;
+  opacity: 0;
+  max-height: 200px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  position: absolute;
+  border-radius: 5px;
+  min-width: 150px;
+  top: 0;
+  box-shadow: 4px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  background-color: #2a272a;
+  border: 10px solid rgba(0, 0, 0, 0.0);
+  z-index: 1;
+  cursor: pointer;
+}
+
+.submenuVertical.visible {
+  visibility: visible;
+  opacity: 1; 
+  transform: translateY(0); 
+  z-index: 1000;
+}
